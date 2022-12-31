@@ -3,8 +3,8 @@ import NavBar from "./NavBar";
 
 export default function Header() {
   return (
-    <header>
-      <h1>TOMBLOGGOLD</h1>
+    <header className='flex flex-row space-between p-2'>
+      <span>tg</span>
       <NavBar />
     </header>
   );

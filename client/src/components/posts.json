@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Article 1",
+    "img": "vite.svg",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu turpis egestas pretium. Convallis posuere morbi leo urna molestie at elementum eu. Augue mauris augue neque gravida in. Elementum facilisis leo vel fringilla est. Elementum facilisis leo vel fringilla est. Tellus elementum sagittis vitae et. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Risus quis varius quam quisque id diam. Elementum tempus egestas sed sed risus pretium quam vulputate."
+  },
+  {
+    "id": 2,
+    "title": "Article 2",
+    "img": "react.svg",
+    "body": "2222222 body for article 2222222"
+  },
+  {
+    "id": 3,
+    "title": "Article 3",
+    "img": "vite.svg",
+    "body": "33333  body for article 3333333"
+  },
+  {
+    "id": 4,
+    "title": "Article 4",
+    "img": "react.svg",
+    "body": "4444444 body for article 44444444"
+  }
+]

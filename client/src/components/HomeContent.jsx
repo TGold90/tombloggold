@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
-import Header from "../components/Header";
 
-export default function Landing() {
+export default function HomeContent() {
   return (
-    <section>
-      <p>
+    <section className='col-span-3 pl-10 my-8 ml-10'>
+      <p className=''>
+        " This is some text about to mission statement of this blog site.
+      </p>
+      <br></br>
+      <p className=''>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -13,6 +16,9 @@ export default function Landing() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum."
       </p>
+      <br></br>
+      <p>Checkout the latest posts below!</p>
+      {/* add down arrow svg/img */}
     </section>
   );
 }

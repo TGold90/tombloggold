@@ -1,17 +1,17 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Landing from "./pages/Landing";
 import About from "./pages/About";
+import HomePage from "./pages/HomePage";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
-      <Header />
+      <NavBar />
       <Routes>
-        <Route path='/' element={<Landing />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<About />} />
       </Routes>
     </Router>
