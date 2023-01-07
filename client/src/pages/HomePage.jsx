@@ -10,7 +10,10 @@ import SelectPost from "../components/SelectPost";
 
 export default function HomePage() {
   const [currentDisp, setCurrentDisp] = useState(null);
-  // export const dispContext = createContext(currentDisp);
+
+  useEffect(() => {
+    setCurrentDisp(null);
+  }, []);
 
   const renderDisp = () => {
     console.log(currentDisp);
