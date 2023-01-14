@@ -17,7 +17,7 @@ export default function SelectPost({ currentDisp, handleDispChange }) {
         <button
           key={post.id}
           onClick={() => setDisplay(post.id)}
-          className='col-span-2 justify-center items-center'
+          className='col-span-2 justify-center items-center border'
         >
           <div className='object-center p-5'>
             <h2>{post.title}</h2>
