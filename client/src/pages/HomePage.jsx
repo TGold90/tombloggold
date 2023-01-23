@@ -24,6 +24,7 @@ export default function HomePage() {
         </>
       );
     }
+    //
     if (currentDisp === 1) {
       return <Article />;
     }
