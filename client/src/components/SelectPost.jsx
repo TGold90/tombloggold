@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 // import { dispContext } from "../pages/HomePage";
 import Posts from "./posts.json";
 import HomePage from "../pages/HomePage";
+import { getAllArticles, getOneArticle } from "../utils/API";
 
 export default function SelectPost({ currentDisp, handleDispChange }) {
   // const state = currentDisp;
@@ -12,15 +13,6 @@ export default function SelectPost({ currentDisp, handleDispChange }) {
 
   const [articleList, setArticleList] = useState([]);
 
-  const getAllArticles = () => {
-    return fetch("/api/articles", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  };
-  // get all articles from DB on page load and set articleList state to list of articles.
   useEffect(() => {
     const getArticleList = async () => {
       try {
@@ -36,6 +28,8 @@ export default function SelectPost({ currentDisp, handleDispChange }) {
     };
     getArticleList();
   }, []);
+
+
 
   return (
     articleList &&

@@ -7,16 +7,28 @@ import HomeContent from "../components/HomeContent";
 import HomeTitle from "../components/HomeTitle";
 import MainTitle from "../components/HomeTitle";
 import SelectPost from "../components/SelectPost";
+import { getOneArticle } from "../utils/API";
 
 export default function HomePage() {
   const [currentDisp, setCurrentDisp] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState(null);
 
   useEffect(() => {
-    setCurrentDisp(null);
-  }, []);
+    if(currentDisp){
+        const fetchArticle = async () => {
+          try {
+            const res = await getOneArticle(currentDisp);
+            const article = await res.json();
+            setSelectedArticle(article);
+          } catch (err) {
+            console.error(err);
+          }
+        };
+        fetchArticle();
+    }
+  }, [currentDisp]);
 
   const renderDisp = () => {
-    console.log(currentDisp);
     if (currentDisp === null) {
       return (
         <>
@@ -25,17 +37,8 @@ export default function HomePage() {
       );
     }
     //
-    if (currentDisp === 1) {
-      return <Article />;
-    }
-    if (currentDisp === 2) {
-      return <Article />;
-    }
-    if (currentDisp === 3) {
-      return <Article />;
-    }
-    if (currentDisp === 4) {
-      return <Article />;
+    if (currentDisp && selectedArticle) {
+      return <Article article={selectedArticle} />;
     }
   };
 
