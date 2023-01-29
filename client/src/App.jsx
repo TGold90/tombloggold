@@ -5,19 +5,19 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
-import { HomePageContext, HomePageUpdateContext, HomePageProvider } from "./utils/HomePageContext";
+import { ThemeProvider } from "./utils/ThemeContext";
 
 
 function App() {
   return (
     <Router>
-      <HomePageProvider> 
-      <NavBar />
+      <ThemeProvider> 
+      {/* <NavBar /> */}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<About />} />
       </Routes>
-      </HomePageProvider>
+      </ThemeProvider>
     </Router>
   );
 }

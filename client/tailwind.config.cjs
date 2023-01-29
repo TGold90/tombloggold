@@ -3,12 +3,12 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      blue: "#5da2d5",
-      lightblue: "#90ccf4",
-      red: "#f78888",
-      yellow: "#f3d250",
-      grey: "#ececec",
-      black: "#242424",
+      green: "#83FE3F",
+      white: "#FDFFFC",
+      purple: "#5D08E6",
+      grey: "#BABABA",
+      black: "#1B1B1E",
+      gold: "#ffd700",
     },
     listStyleType: {
       none: "none",
@@ -16,6 +16,9 @@ module.exports = {
       decimal: "decimal",
       square: "square",
       roman: "upper-roman",
+    },
+    fontFamily: {
+      header: ['Righteous'],
     },
     screens: {
       sm: { min: "300px", max: "640px" },

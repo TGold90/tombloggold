@@ -1,12 +1,24 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import tomguitar from "../images/tomguitar.jpeg";
-import Github from "../images/GitHub-64px.png";
+import Github from "../images/GitHub-white.png";
+import GithubBlack from "../images/GitHub-black.png"
 import LinkedIn from "../images/linkedin.png";
 
 export default function Aside(props) {
   return (
-    <aside className='flex flex-col col-span-1 mr-10 rounded-lg items-center justify-center text-center'>
-      <div className='rounded justify-center items-center text-center px-10 text-sm'>
+    <aside className='mr-10 items-center justify-center text-center border-l-2'>
+      <div className='rounded px-10 text-sm relative top-10'>
+      <nav className='header-font'>
+        <ul className='flex flex-row text-lg p-5 mr-20'>
+          <Link to='/' className='px-2'>
+            Home
+          </Link>
+          <Link to='/about' className='px-2'>
+            About
+          </Link>
+        </ul>
+      </nav>
         <img src={tomguitar} className='rounded-t-full border'></img>
         <p className='text-lg p-1'>
           Tom <span>Gold</span>

@@ -7,7 +7,7 @@ export default function HomeContent() {
         " This is some text about to mission statement of this blog site.
       </p>
       <br></br>
-      <p className=''>
+      <p className='body-font'>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

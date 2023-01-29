@@ -32,20 +32,22 @@ export default function SelectPost({ currentDisp, handleDispChange }) {
 
 
   return (
-    articleList &&
+    <section className='col-span-4 grid grid-cols-4 justify-center items-center mx-20 my-10 gap-5 h-72'>
+    {articleList &&
     articleList.map(article => {
       return (
         <button
           key={article._id}
           onClick={() => setDisplay(article._id)}
-          className='col-span-2 justify-center items-center border'
+          className='col-span-2 justify-center items-center border h-36'
         >
           <div className='object-center p-5'>
-            <h2>{article.title}</h2>
+            <h2 className="header-font">{article.title}</h2>
             <img src={article.img} className='object-center'></img>
           </div>
         </button>
       );
-    })
+    })}
+    </section>
   );
 }

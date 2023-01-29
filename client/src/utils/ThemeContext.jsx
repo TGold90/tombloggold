@@ -17,7 +17,6 @@ export function ThemeProvider ({children}) {
     function toggelTheme() {
         setDarkTheme(prevDarkTheme => !prevDarkTheme)
     }
-}
 
 return (
     <ThemeContext.Provider value={darkTheme}>
@@ -26,3 +25,4 @@ return (
         </ThemeUpdateContext.Provider>
     </ThemeContext.Provider>
 )
+}
