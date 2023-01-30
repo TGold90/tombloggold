@@ -9,10 +9,15 @@ import MainTitle from "../components/HomeTitle";
 import NavBar from "../components/NavBar";
 import SelectPost from "../components/SelectPost";
 import { getOneArticle } from "../utils/API";
+import { useTheme, useThemeUpdate } from "../utils/ThemeContext";
 
 export default function HomePage() {
   const [currentDisp, setCurrentDisp] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
+
+  const darkTheme = useTheme();
+  const toggleTheme = useThemeUpdate();
+  const theme = darkTheme ? "dark" : "light";
 
   useEffect(() => {
     if (currentDisp) {
@@ -48,7 +53,7 @@ export default function HomePage() {
   return (
     <>
       <NavBar />
-      <main className='grid grid-cols-4 gap-10'>
+      <main className={darkTheme ? "dark grid grid-cols-4 gap-10" : "light grid grid-cols-4 gap-10"}>
         {renderDisp()}
         <Aside />
         <SelectPost

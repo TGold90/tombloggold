@@ -10,7 +10,7 @@
 
   color-scheme: light dark;
   /* color: #5c17dc; */
-  background-color: #FDFFFC;
+  /* background-color: #FDFFFC; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,20 @@
 
 .body-font {
   font-family: 'Open Sans', sans-serif;
+}
+
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.light {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 .shimmer {

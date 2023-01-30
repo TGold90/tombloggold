@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useTheme, useThemeUpdate } from "../utils/ThemeContext";
 
 export default function HomeContent() {
+
+  const darkTheme = useTheme();
+  const toggleTheme = useThemeUpdate();
+  const theme = darkTheme ? "dark" : "light";
+
   return (
-    <section className='col-span-3 pl-10 my-8 ml-10'>
+    <section className={darkTheme ? "dark col-span-3 pl-10 my-8 ml-10" : "light col-span-3 pl-10 my-8 ml-10"}>
       <p className=''>
         " This is some text about to mission statement of this blog site.
       </p>

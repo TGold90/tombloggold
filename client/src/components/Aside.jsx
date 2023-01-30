@@ -4,21 +4,28 @@ import tomguitar from "../images/tomguitar.jpeg";
 import Github from "../images/GitHub-white.png";
 import GithubBlack from "../images/GitHub-black.png"
 import LinkedIn from "../images/linkedin.png";
+import { useTheme, useThemeUpdate } from "../utils/ThemeContext";
 
 export default function Aside(props) {
+
+  const darkTheme = useTheme();
+  const toggleTheme = useThemeUpdate();
+  const theme = darkTheme ? "dark" : "light";
+
   return (
-    <aside className='mr-10 items-center justify-center text-center border-l-2'>
+    <aside className={darkTheme ? "dark mr-10 items-center justify-center text-center border-l-2 " : "light mr-10 items-center justify-center text-center border-l-2 "}>
       <div className='rounded px-10 text-sm relative top-10'>
-      <nav className='header-font'>
-        <ul className='flex flex-row text-lg p-5 mr-20'>
-          <Link to='/' className='px-2'>
-            Home
-          </Link>
-          <Link to='/about' className='px-2'>
-            About
-          </Link>
-        </ul>
-      </nav>
+        <nav className='header-font'>
+          <ul className='flex flex-row text-lg p-5 mr-20'>
+            <Link to='/' className='px-2'>
+              Home
+            </Link>
+            <Link to='/about' className='px-2'>
+              About
+            </Link>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+          </ul>
+        </nav>
         <img src={tomguitar} className='rounded-t-full border'></img>
         <p className='text-lg p-1'>
           Tom <span>Gold</span>

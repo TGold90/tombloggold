@@ -11,18 +11,18 @@ export function useThemeUpdate() {
     return useContext(ThemeUpdateContext)
 }
 
-export function ThemeProvider ({children}) {
+export function ThemeProvider({ children }) {
     const [darkTheme, setDarkTheme] = useState(true)
 
-    function toggelTheme() {
+    function toggleTheme() {
         setDarkTheme(prevDarkTheme => !prevDarkTheme)
     }
 
-return (
-    <ThemeContext.Provider value={darkTheme}>
-        <ThemeUpdateContext.Provider value={toggelTheme}>
-        {children}
-        </ThemeUpdateContext.Provider>
-    </ThemeContext.Provider>
-)
+    return (
+        <ThemeContext.Provider value={darkTheme}>
+            <ThemeUpdateContext.Provider value={toggleTheme}>
+                {children}
+            </ThemeUpdateContext.Provider>
+        </ThemeContext.Provider>
+    )
 }
