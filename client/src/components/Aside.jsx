@@ -5,25 +5,34 @@ import Github from "../images/GitHub-white.png";
 import GithubBlack from "../images/GitHub-black.png"
 import LinkedIn from "../images/linkedin.png";
 import { useTheme, useThemeUpdate } from "../utils/ThemeContext";
+import LightningIcon from "./SVG/LightningLight";
+import LightningLight from "./SVG/LightningLight";
+import LightningDark from "./SVG/LightningDark";
+import HomePage from "../pages/HomePage";
 
-export default function Aside(props) {
+export default function Aside({ currentDisp, handlDispChange }) {
 
   const darkTheme = useTheme();
   const toggleTheme = useThemeUpdate();
   const theme = darkTheme ? "dark" : "light";
+
+  const setDisplay = id => {
+    handleDispChange(id ? id : null);
+    // console.log(currentDisp);
+  };
 
   return (
     <aside className={darkTheme ? "dark mr-10 items-center justify-center text-center border-l-2 " : "light mr-10 items-center justify-center text-center border-l-2 "}>
       <div className='rounded px-10 text-sm relative top-10'>
         <nav className='header-font'>
           <ul className='flex flex-row text-lg p-5 mr-20'>
-            <Link to='/' className='px-2'>
+            <Link onClick={() => setDisplay(null)} to='/' className='px-2'>
               Home
             </Link>
             <Link to='/about' className='px-2'>
               About
             </Link>
-            <button onClick={toggleTheme}>Toggle Theme</button>
+            <button onClick={toggleTheme}>{darkTheme ? <LightningDark /> : <LightningLight />}</button>
           </ul>
         </nav>
         <img src={tomguitar} className='rounded-t-full border'></img>

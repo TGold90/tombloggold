@@ -55,7 +55,10 @@ export default function HomePage() {
       <NavBar />
       <main className={darkTheme ? "dark grid grid-cols-4 gap-10" : "light grid grid-cols-4 gap-10"}>
         {renderDisp()}
-        <Aside />
+        <Aside
+          currentDisp={currentDisp}
+          handleDispChange={handleDispChange}
+        />
         <SelectPost
           currentDisp={currentDisp}
           handleDispChange={handleDispChange}
